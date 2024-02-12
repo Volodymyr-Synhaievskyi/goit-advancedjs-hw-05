@@ -1,6 +1,10 @@
-console.log('Hello world');
+import { concatenation } from './concatenation';
 
-let test = 1;
-let test2 = ' test value';
-console.log(test);
-console.log(test2);
+const button = document.querySelector('button')!;
+const input = document.querySelector('input')!;
+
+if (button && input) {
+  button.addEventListener('click', () => {
+    concatenation(input.value, 'hello!');
+  });
+}
